@@ -132,12 +132,12 @@ BJ_REPORT.tryJs().spyAll();
 ```
 
 ## update log
-##### v1.1.8
-1. 项目重命名后更新项目路径(注: 之前名字为`report`)
 
 ##### v1.1.7
 1. 合并上报的问题
 2. 增加sea.use try-catch 处理
+3. 项目重命名后更新项目路径(注: 之前名字为`report`)
+4. 修复zepto event 没有try-catch 的bug
 
 ##### v1.1.6
 1. add BJ_ERROR hash

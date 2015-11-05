@@ -424,6 +424,24 @@ if (typeof exports !== "undefined") {
             };
         }
 
+
+        if($.zepto){
+            var _on = _$.fn.on;
+            var _off = _$.fn.off;
+            _$.fn.on= makeArgsTry(_on);
+            _$.fn.off = function () {
+                var arg, args = [];
+                for (var i = 0, l = arguments.length; i < l; i++) {
+                    arg = arguments[i];
+                    _isFunction(arg) && (arg = arg.tryWrap);
+                    args.push(arg);
+                }
+                return _off.apply(this, args);
+            };
+        }
+
+
+
         return tryJs;
     };
 
