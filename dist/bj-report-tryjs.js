@@ -40,7 +40,7 @@ var BJ_REPORT = (function(global) {
     };
 
     var orgError = global.onerror;
-    // rewrite window.oerror
+    // rewrite window.onerror
     global.onerror = function(msg, url, line, col, error) {
         var newMsg = msg;
 
